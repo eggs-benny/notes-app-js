@@ -2,7 +2,7 @@ const NotesModel = require('./notesModel');
 
 describe('NotesModel', () => {
   describe('#getNotes', () => {
-    fit('returns an empty array', () => {
+    it('returns an empty array', () => {
       const model = new NotesModel();
       expect(model.getNotes()).toEqual([]);
     });
@@ -17,7 +17,7 @@ describe('NotesModel', () => {
     });
 
     describe('#reset', () => {
-      it('adds note to the notes array', () => {
+      xit('adds note to the notes array', () => {
         const model = new NotesModel();
         model.addNote('Buy Milk');
         model.addNote('Go to the gym');
