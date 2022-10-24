@@ -1,33 +1,32 @@
-const NotesModel = require('../lib/notesModel');
+const NotesModel = require('./notesModel');
 
 describe('NotesModel', () => {
   describe('#getNotes', () => {
-    it('returns an empty array', () => {
+    fit('returns an empty array', () => {
       const model = new NotesModel();
       expect(model.getNotes()).toEqual([]);
     });
 
-  describe('#addNote', () => {
-    it('adds note to the notes array', () => {
-      const model = new NotesModel();
-      model.addNote('Buy Milk');
-      model.addNote('Go to the gym');
-      expect(model.getNotes()).toEqual(['Buy Milk', 'Go to the gym'])
-    })
-  })
+    describe('#addNote', () => {
+      it('adds note to the notes array', () => {
+        const model = new NotesModel();
+        model.addNote('Buy Milk');
+        model.addNote('Go to the gym');
+        expect(model.getNotes()).toEqual(['Buy Milk', 'Go to the gym']);
+      });
+    });
 
-  describe('#reset', () => {
-    it('adds note to the notes array', () => {
-    const model = new NotesModel();
-    model.addNote('Buy Milk');
-    model.addNote('Go to the gym');
-    model.reset();
-    expect(model.getNotes()).toEqual([])
-    })
-  })
-
-
-
+    describe('#reset', () => {
+      it('adds note to the notes array', () => {
+        const model = new NotesModel();
+        model.addNote('Buy Milk');
+        model.addNote('Go to the gym');
+        model.reset();
+        expect(model.getNotes()).toEqual([]);
+      });
+    });
+  });
+});
 
 //     it("doesn't add 3rd roll into frame", () => {
 //       const frame = new Frame();
