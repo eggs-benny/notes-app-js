@@ -17,7 +17,7 @@ describe('NotesModel', () => {
     });
 
     describe('#reset', () => {
-      xit('adds note to the notes array', () => {
+      it('adds note to the notes array', () => {
         const model = new NotesModel();
         model.addNote('Buy Milk');
         model.addNote('Go to the gym');
